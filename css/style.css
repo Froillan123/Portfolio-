@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
 * {
     margin: 0;
     padding: 0;
@@ -10,48 +11,53 @@
     font-family: "Poppins", sans-serif;
 }
 
-:root 
-{
-    --bg-color: #1f242d;
-    --second-bg-color: #323946;
-    --text-color: #fff;
-    --main-color: #0ef;
-}
-html::-webkit-scrollbar
-{
-  width: 1.5em;
-  height: 1em;
+:root {
+    --bg-color: #E5E5E5; /* Light gray background */
+    --second-bg-color: #F0F0F0; /* Lighter gray for sections */
+    --text-color: #333; /* Dark gray text color */
+    --main-color: #FF5733; /* A unique primary color (orange) */
+
+    /* Scrollbar styles */
+    --scrollbar-track: #F0F0F0; /* Light scrollbar track */
+    --scrollbar-thumb: #CCCCCC; /* Light scrollbar thumb */
 }
 
-html::-webkit-scrollbar-track
-{
-  background:var(--black);
-  border-radius: 100vw;
-  margin-block: 0.5em;
+
+/* Customize scrollbar styles */
+html::-webkit-scrollbar {
+    width: 1.5em;
+    height: 1em;
 }
 
-html::-webkit-scrollbar-thumb
-{
-  background: linear-gradient(#F4F4F4, #AAA5BA);
-  border-radius: 100vw;
-  margin-block: 0.5em;
+html::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+    border-radius: 100vw;
+    margin-block: 0.5em;
 }
 
+html::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 100vw;
+    margin-block: 0.5em;
+}
+
+/* Selection color */
 *::selection {
     background: var(--main-color);
     color: var(--bg-color);
-  }
+}
 
-html
-{
+html {
     font-size: 62.5%;
 }
 
-body
-{
+body {
     background: var(--bg-color);
     color: var(--text-color);
 }
+
+/* Rest of your CSS styles remain unchanged. */
+
 section
 {
     min-height: 100vh;
