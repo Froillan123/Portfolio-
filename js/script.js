@@ -86,3 +86,39 @@ icon.onclick = function() {
         icon.src = "images/moon.png"; 
     }
 };
+
+
+
+function sendEmail(){
+const fname = document.getElementById('name');
+const email = document.getElementById('email');
+const contact = document.getElementById('contact');
+const emailsub = document.getElementById('emailSub');
+const submit = document.getElementsByClassName('form-contact')[0];
+
+
+Email.send({
+    SecureToken: "148b08e1-72e7-4341-bb0b-e4f0487d7709",
+    To: 'kimperor123@gmail.com',
+    From: 'kimperor123@gmail.com',
+    Subject: "Portfolio",
+    Body: "From Portfolio"
+}).then(
+    message => {
+        // Display a SweetAlert message based on the Email.js response
+        if (message === "OK") {
+            Swal.fire({
+                icon: 'success',
+                title: 'Email Sent Successfully',
+                text: 'Thank you for your message!'
+            });
+        } else {
+            Swal.fire({
+                icon: 'error',
+                title: 'Email Not Sent',
+                text: 'An error occurred while sending the email.'
+            });
+        }
+    }
+);
+}

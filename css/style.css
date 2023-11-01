@@ -112,6 +112,27 @@ section
     position: relative;
     flex: 1;
 }
+.swal2-popup 
+{
+    width: auto; 
+    max-width: 80%; 
+}
+
+.swal2-title 
+{
+    font-size: 3rem;
+}
+
+.swal2-content 
+{
+    font-size: 2rem; 
+    line-height: 1.4; 
+}
+.swal2-actions .swal2-confirm
+{
+    font-size: 1.6rem;
+    padding: 10px 20px; 
+}
 
 .navbar a::after
 {
