@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
-
 * {
     margin: 0;
     padding: 0;
@@ -12,52 +11,69 @@
 }
 
 :root {
-    --bg-color: #E5E5E5; /* Light gray background */
-    --second-bg-color: #F0F0F0; /* Lighter gray for sections */
-    --text-color: #333; /* Dark gray text color */
-    --main-color: #FF5733; /* A unique primary color (orange) */
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --main-color: #0ef;
+    --scrollbar-track: #F0F0F0;
+    --scrollbar-thumb: #CCCCCC;
+    --lightmode-bg-color: #fff;
+    --lightmode-second-bg-color: rgb(204, 196, 196);
+    --lightmode-text-color: #000000;
+    --lightmode-main-color: #FF5733;
+}
 
-    /* Scrollbar styles */
-    --scrollbar-track: #F0F0F0; /* Light scrollbar track */
-    --scrollbar-thumb: #CCCCCC; /* Light scrollbar thumb */
+.light-mode {
+    --bg-color: var(--lightmode-bg-color);
+    --second-bg-color: var(--lightmode-second-bg-color);
+    --text-color: var(--lightmode-text-color);
+    --main-color: var(--lightmode-main-color);
 }
 
 
-/* Customize scrollbar styles */
-html::-webkit-scrollbar {
-    width: 1.5em;
-    height: 1em;
+.light-mode
+{
+    --lightmode:#fff;
+    --second-background: rgb(159, 157, 157);
+    --second-text-color: #1f242d;
+    --second--main-color: #FF5733;
 }
 
-html::-webkit-scrollbar-track {
-    background: var(--scrollbar-track);
-    border-radius: 100vw;
-    margin-block: 0.5em;
+html::-webkit-scrollbar
+{
+  width: 1.5em;
+  height: 1em;
 }
 
-html::-webkit-scrollbar-thumb {
-    background: var(--scrollbar-thumb);
-    border-radius: 100vw;
-    margin-block: 0.5em;
+html::-webkit-scrollbar-track
+{
+  background:var(--bg-color);
+  border-radius: 100vw;
+  margin-block: 0.5em;
 }
 
-/* Selection color */
+html::-webkit-scrollbar-thumb
+{
+  background: linear-gradient(#F4F4F4, #AAA5BA);
+  border-radius: 100vw;
+  margin-block: 0.5em;
+}
+
 *::selection {
     background: var(--main-color);
     color: var(--bg-color);
-}
+  }
 
-html {
+html
+{
     font-size: 62.5%;
 }
 
-body {
+body
+{
     background: var(--bg-color);
     color: var(--text-color);
 }
-
-/* Rest of your CSS styles remain unchanged. */
-
 section
 {
     min-height: 100vh;
@@ -93,13 +109,42 @@ section
     font-size: 1.7rem;
     color: var(--text-color);
     margin: 4rem; 
+    position: relative;
+    flex: 1;
 }
 
-.navbar a:hover,
+.navbar a::after
+{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: var(--main-color);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: .4s;
+}
+
+.navbar a:hover::after,
 .navbar a.active
 {
     color: var(--main-color);
+    width: 100%;
 }
+
+
+#icon {
+    width: 30px;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-left: 10px;
+    position: absolute;
+    left: 10px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    background: var(--second-text-color);
+}
+
 
 #menu-icon
 {
@@ -145,7 +190,7 @@ span
 
 .btn
 {
-      display: inline-block;
+    display: inline-block;
     padding: 1rem 2.8rem;
     background: var(--main-color);
     border-radius: 4rem;
@@ -154,6 +199,7 @@ span
     color: var(--second-bg-color);
     letter-spacing: .1rem;
     font-weight: 600;
+    margin-bottom: 2rem
 }
 
 .home-content h1
@@ -197,6 +243,7 @@ span
     gap: 2rem;
     background: var(--second-bg-color);
     margin-bottom: 5rem;
+    outline: hidden;
 }
 
 .about-content
@@ -215,6 +262,7 @@ span
 {
     background-position: 0% 0%;
 }
+
 .heading
 {
     font-size: 4.5rem;
@@ -224,7 +272,7 @@ span
 {
     text-align: left;
     line-height: 1.2;
-    margin-bottom: 4rem;
+    margin-bottom: 1rem;
 }
 .about-content h3
 {
@@ -236,6 +284,52 @@ span
     margin: 2rem 0 3rem;
 }
 
+.tab-titles
+{
+    display: flex;
+}
+.tab-titles .tab-links
+{
+    margin-right: 50px;
+    font-size: 1.7rem;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 4rem;
+}
+.tab-titles .tab-links::after
+{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: var(--main-color);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: .4s;
+}
+.tab-titles .tab-links.active-link::after
+{
+    width: 100%;
+}
+.tab-contents ul li
+{
+    list-style: none;
+    margin: 1rem 0 2.5rem;
+    font-size: 1.4rem;
+}
+.tab-contents ul li span
+{
+    font-size: 1.6rem;
+}
+.tab-contents
+{
+    display: none;
+}
+.tab-contents.active-tab
+{
+    display: block;
+}
 .services h2
 {
     margin-bottom: 5rem;
@@ -461,6 +555,8 @@ span
     {
         font-size: 55%;
     }
+
+    
 }
 
 @media(max-width: 990px)
@@ -519,7 +615,8 @@ span
 }
 
 @media(max-width: 768px)
-{
+{   
+
     .portfolio-container
    {
     grid-template-columns: repeat(1, 1fr);
@@ -528,6 +625,12 @@ span
     {
         display: block;
         cursor: pointer;
+    }
+    #icon
+    {
+        position: relative;
+        left: -10px;
+         transform: translateY(0%); 
     }
     .navbar
     {
@@ -552,6 +655,11 @@ span
         font-size: 2rem;
         margin: 3rem 0;
          
+    }
+    .navbar a:hover::after, 
+    .navbar a.active
+    {
+     width: 0;
     }
     .home 
     {
