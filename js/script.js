@@ -48,16 +48,14 @@ ScrollReveal({
     delay: 200
 });
 ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
-ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact form',  { origin: 'bottom' });
-ScrollReveal().reveal('.home-content h1, .about-img',  { origin: 'left' });
-ScrollReveal().reveal('.home-content p, .about-content',  { origin: 'right' });
-
+ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact form, .about-content',  { origin: 'bottom' });
+ScrollReveal().reveal('.about-img',  { origin: 'left' });
 
 const typed = new Typed('.multiple-text',{
-    strings: ['Frontend Developer', 'Java Programmer', 'Marketing Expert', 'Business Management', 'Coaching Expert'],
+    strings: ['Frontend Developer', 'Java Programmer', 'Marketing Expert', 'Business Manager', 'Coaching Expert'],
     typeSpeed: 100,
     backSpeed: 100,
-    backDelay: 500,
+    backDelay: 700,
     loop: true
 });
 
@@ -122,3 +120,17 @@ Email.send({
     }
 );
 }
+
+function toggleReadMore(button) {
+    const readMoreContent = button.nextElementSibling;
+    readMoreContent.style.display = "block";
+    button.style.display = "none";
+}
+
+function toggleShowLess(button) {
+    const readMoreContent = button.parentElement;
+    readMoreContent.style.display = "none";
+    const readMoreButton = readMoreContent.parentElement.querySelector(".btn");
+    readMoreButton.style.display = "inline-block";
+}
+

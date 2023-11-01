@@ -18,7 +18,7 @@
     --scrollbar-track: #F0F0F0;
     --scrollbar-thumb: #CCCCCC;
     --lightmode-bg-color: #fff;
-    --lightmode-second-bg-color: rgb(204, 196, 196);
+    --lightmode-second-bg-color: rgb(235, 226, 226);
     --lightmode-text-color: #000000;
     --lightmode-main-color: #FF5733;
 }
@@ -28,16 +28,9 @@
     --second-bg-color: var(--lightmode-second-bg-color);
     --text-color: var(--lightmode-text-color);
     --main-color: var(--lightmode-main-color);
-}
-
-
-.light-mode
-{
-    --lightmode:#fff;
-    --second-background: rgb(159, 157, 157);
     --second-text-color: #1f242d;
-    --second--main-color: #FF5733;
 }
+
 
 html::-webkit-scrollbar
 {
@@ -180,7 +173,6 @@ section
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
 .home-img img
@@ -209,18 +201,21 @@ span
 
 }
 
-.btn
-{
+.btn {
     display: inline-block;
-    padding: 1rem 2.8rem;
+    padding: 1.5rem 2.8rem;
     background: var(--main-color);
     border-radius: 4rem;
-    box-shadow: 0 0 1rem var(--main-color);
-    font-size: 1.6rem;
+    font-size: 1.9rem;
     color: var(--second-bg-color);
     letter-spacing: .1rem;
     font-weight: 600;
-    margin-bottom: 2rem
+    margin-bottom: 2rem;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+.btn:hover
+{
+    box-shadow: 0 0 1rem var(--main-color);
 }
 
 .home-content h1
@@ -270,6 +265,7 @@ span
 .about-content
 {
     margin-left: 50px;
+    max-width: 100%;
 }
 .about-img img
 {
@@ -308,10 +304,11 @@ span
 .tab-titles
 {
     display: flex;
+    flex-wrap: wrap;
 }
 .tab-titles .tab-links
 {
-    margin-right: 50px;
+    margin-right: 50px; 
     font-size: 1.7rem;
     font-weight: 500;
     cursor: pointer;
@@ -569,7 +566,13 @@ span
     color: var(--second-bg-color);
 }
 
+.services-box {
+    margin-bottom: 20px;
+}
 
+.read-more-content {
+    display: none;
+}
 @media(max-width: 1200px)
 {
     html
@@ -728,16 +731,26 @@ span
     {
         width: 100%;
     }
+    .about-content
+    {
+        margin: 0;
+    }
+    
 }
 @media(max-width: 365px)
 {
+
+    .home
+    {
+        outline: hidden;
+    }
     .home-img img 
     {
-        width: 90vw;
+        width: 70vw;
     }
     .about img 
     {
-        width: 90vw;
+        width: 70vw;
     }
     .footer
     {
@@ -756,4 +769,15 @@ span
     {
         font-size: 1.4rem;
     }
+    
+
+.about-content
+{
+    margin-left: 0px;
 }
+.about-content p 
+{
+    flex-wrap: wrap;
+}
+}
+
