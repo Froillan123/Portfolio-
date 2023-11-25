@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" type="images/png" href="images/favicon.png">
     <!-- box icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- custom css -->
@@ -36,7 +38,7 @@
                 <a href="https://www.instagram.com/parkhyungseokdg/"><i class='bx bxl-instagram' ></i></a>
                 <a href="https://www.linkedin.com/in/froillan-kim-b-edem-5b591b252/"><i class='bx bxl-linkedin' ></i></a>
             </div>
-            <a href="#" class="btn">Hire Me</a>
+            <a href="mailto:someone@froillan.edem@gmail.com" class="btn">Hire Me</a>
         </div>
         <div class="home-img">
             <img src="images/KimPicture.jpg" alt="">
@@ -190,23 +192,27 @@
             Contact <span>Me!</span>
         </h2>
 
-        <form action="#" onsubmit="sendEmail(); reset(); return false" >
+        <form action="#" >
             <div class="input-box">
                 
-                <input type="text" placeholder="Full Name" required id="name">
-                <input type="email" placeholder="Email Address" required id="email">
+                <input type="text" name="userName" placeholder="Full Name" required id="name">
+                <input type="email" name="userEmail" placeholder="Email Address" required id="email">
 
             </div>
 
             <div class="input-box">
                 
-                <input type="number" placeholder="Contact Number" required id="contact">
-                <input type="text" placeholder="Email Subject" required id="emailSub">
+                <input type="number" name="userPhone" placeholder="Contact Number" required id="contact">
+                <input type="text" name="emailSub" placeholder="Email Subject" required id="emailSub">
 
             </div>
 
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" id="message"></textarea>
-            <input type="submit" value="Send Message" class="btn" id="submit">
+            <textarea name="userMessage" id="" cols="30" rows="10" placeholder="Your Message" id="message"></textarea>
+            <input type="submit" name="send" value="submit" class="btn" id="submit">
+
+            <div class="sucess">
+                <strong>Sucess</strong>
+                </div>
         </form>
     </section>
 
