@@ -178,9 +178,9 @@ section
 .home-img img
 {
     width: 30vw;
-    border: 1rem solid var(--main-color);
+    border: .5rem solid var(--main-color);
     border-radius: 50%;
-    transform: translate(130px);
+    transform: translate(150px);
     animation: floatImage 4s ease-in-out infinite;
 }
 
