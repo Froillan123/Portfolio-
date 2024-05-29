@@ -173,26 +173,15 @@ section
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1.5rem;
-    padding-top: 8rem;
-    height: 100vh;
-    margin-bottom: 10rem;
-    flex-wrap: wrap;
-    position: relative;
-    overflow: hidden;
-}
-.home-content
-{
-    flex: 1 1 55rem;
-    padding-right: 2rem;
 }
 
 .home-img img
 {
-    width: 35vw;
+    width: 30vw;
     border: .5rem solid var(--main-color);
     border-radius: 50%;
-    flex: 1 1 45rem;
+    transform: translate(150px);
+    animation: floatImage 4s ease-in-out infinite;
 }
 
 .home-content h3
