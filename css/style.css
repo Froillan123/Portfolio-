@@ -17,9 +17,9 @@
     --main-color: #0ef;
     --scrollbar-track: #F0F0F0;
     --scrollbar-thumb: #CCCCCC;
-    --lightmode-bg-color: #fff;
-    --lightmode-second-bg-color: rgb(235, 226, 226);
-    --lightmode-text-color: #000000;
+    --lightmode-bg-color: #1f242d;
+    --lightmode-second-bg-color: #323946;
+    --lightmode-text-color: #fff;
     --lightmode-main-color: #FF5733;
 }
 
@@ -173,15 +173,26 @@ section
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 1.5rem;
+    padding-top: 8rem;
+    height: 100vh;
+    margin-bottom: 10rem;
+    flex-wrap: wrap;
+    position: relative;
+    overflow: hidden;
+}
+.home-content
+{
+    flex: 1 1 55rem;
+    padding-right: 2rem;
 }
 
 .home-img img
 {
-    width: 30vw;
+    width: 35vw;
     border: .5rem solid var(--main-color);
     border-radius: 50%;
-    transform: translate(150px);
-    animation: floatImage 4s ease-in-out infinite;
+    flex: 1 1 45rem;
 }
 
 .home-content h3
@@ -361,6 +372,7 @@ span
     gap: 2rem;
     transition: .3s ease;
     margin-bottom: 5rem;
+    cursor: pointer;
 }
 
 .services-container .services-box
