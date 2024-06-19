@@ -52,10 +52,10 @@ ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact 
 ScrollReveal().reveal('.about-img',  { origin: 'left' });
 
 const typed = new Typed('.multiple-text',{
-    strings: ['Frontend Developer', 'Java Programmer', 'Marketing Expert', 'Business Manager', 'Coaching Expert'],
+    strings: ['Frontend Developer', 'Marketing Expert', 'Database Administrator'],
     typeSpeed: 100,
     backSpeed: 100,
-    backDelay: 700,
+    backDelay: 500,
     loop: true
 });
 
